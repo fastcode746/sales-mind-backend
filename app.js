@@ -131,7 +131,13 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin: '*',
+     origin: [
+      "http://localhost:5173",
+      "http://localhost:8000",
+      "http://localhost:8081",
+      "http://localhost:8001",
+      "https://saleminds-frontend.vercel.app"
+    ],
     credentials: true,
     methods: "GET,POST,PUT,DELETE,PATCH"
   })
